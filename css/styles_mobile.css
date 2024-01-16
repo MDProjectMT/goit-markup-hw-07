@@ -14,6 +14,11 @@
     --icon-color: #8E8F99;
     --footer-color: #31d0aa;
 }
+html, body {
+    width: 100vw;
+    min-width: 100%;
+    overflow-x: hidden;
+}
 body {
     font-family: "Roboto", sans-serif;
     color: var(--body-color);
@@ -38,7 +43,6 @@ ul {
 }
 header {
     background-color: var(--white-color);
-    display: none;
 }
 a {
     font-size: 12px;
@@ -48,6 +52,10 @@ a {
 section {
     padding-top: 120px;
     padding-bottom: 120px;
+}
+li {
+    color: var(--header-color);
+    font-size: 12px;
 }
 .list {
     background-color: var(--white-color);
@@ -63,8 +71,8 @@ section {
     margin-bottom: 72px;
 }
 .headerstyl {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 56px;
+    line-height: 1.07;
     text-align: center;
     justify-content: center;
     letter-spacing: 0.02em;
@@ -72,14 +80,12 @@ section {
     max-width: 496px;
     height: auto;
     padding-bottom: 48px;
+
 }
 .bgn-team {
     background-color: var(--color-background);
 }
-li {
-    color: var(--header-color);
-    font-size: 12px;
-}
+
 .btn-p {
     font-weight: 500;
     font-size: 16px;
@@ -226,9 +232,8 @@ li {
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hdr {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--header-color);
@@ -293,11 +298,9 @@ li {
         0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container { 
-    width: 100%;
-    max-width: 768px;
-    padding: 24px 16px;
+    width: 1158px;
     margin: 0 auto;
-    
+    padding: 0 15px;
 }
 .container-flex-one {
     display: flex;
@@ -346,14 +349,13 @@ li {
     justify-content: center;
     align-items: center;
     margin: 0px 90px 120px 90px;
-
 }
 .flex-three {
     display: flex;
-    flex-direction: column;
-    gap: 72px;
-    margin: 16px 0;
+    width: auto;
+    height: 104px;
     align-items: flex-start;
+    gap: 24px;
 }
 .flex-four {
     display: flex;
@@ -497,7 +499,13 @@ li {
     padding: 96px 0 120px 0;
 }
 .icons-atut {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    background-color: var(--color-background);
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 .svg-atut {
     display: block;
@@ -635,14 +643,16 @@ li {
     visibility: hidden;
     pointer-events: none;
 }
-
+.close-btn-position {
+    position: absolute;
+        top: 24px;
+        right: 24px;
+}
 .close-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 24px;
-    right: 24px;
+    
     width: 24px;
     height: 24px;
     background-color: var(--button-color);
@@ -847,39 +857,122 @@ li {
     background-color: var(--focus-hover);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 768px) {
+    .container-flex-one > .flex-nav .flex-items, 
+    .contact {
+        display: none;
     }
-
-@media (min-width: 768px) {
-
-}
-@media (min-width: 1158px) {
-    .headerstyl {
-        font-size: 56px;
-        line-height: 1.07;
+    .js-menu-container {
+        display: none;
+    }
+    .js-menu-container.is-open {
+        display: block;
     }
     .container {
-        width: 1158px;
-        padding: 0 15px;
+        width: 100%;
+        max-width: 768px;
+        padding: 24px 16px;
     }
-    .flex-three {
-        flex-direction: row;
-        width: auto;
-        gap: 24px;
+    .flex-nav {
+        width: 100%;
+        justify-content: space-between;
     }
-    .icons-atut {
+    .mobile-menu-container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+    .menu-mobile.is-open {
+        display: flex;
+        flex-flow: column nowrap;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right:0;
+        height: 100vh;
+        background-color: var(--white-color);
+        z-index: 10;
+    }
+    .menu-mobile.is-open .btn-container {
+        display: flex;
+        justify-content: end;
+        padding-top: 24px;
+        padding-right: 24px;
+    }
+    .menu-mobile.is-open .btn-container .close-btn {
+        background-color: rgba(231, 233, 252, 0.1);
+    }
+    .menu-mobile.is-open .mobile-menu-container .flex-nav .flex-items {
+        flex-direction: column;
+        gap: 0;
+    }
+    .menu-mobile.is-open .mobile-menu-container .flex-nav .flex-items .list-item {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        padding-left: 40px;
+        
+    }
+    .menu-mobile.is-open .mobile-menu-container .flex-nav .flex-items .list-item.active::after {
+        display: none;
+    }
+    .menu-mobile.is-open .mobile-menu-container .mobile-contact .flex-address {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .menu-mobile.is-open .mobile-menu-container .mobile-contact .flex-address .linkcolor {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        padding-left: 40px;
+        color: var(--focus-hover);
+        font-style: normal;
+    }
+    .menu-mobile.is-open .mobile-menu-container .mobile-contact .flex-address .linkcolor-first {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 40px;
+        padding-left: 40px;
+        color: var(--header-color);
+        font-style: normal;
+        
+    }
+    .menu-mobile.is-open .mobile-menu-container .flex-platform-mobile {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 24px 0;
-        background-color: var(--color-background);
-        border-radius: 4px;
-        margin-bottom: 8px;
+        padding: 48px 0;
+        gap: 56px;
     }
-    .hdr {
-        
-        text-align: left;
+    .headerstyl {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .flex-two {
+        margin: 0;
+    }
+    .flex-two .flex-three {
+        flex-direction: column;
+        gap: 72px;
+        margin: 16px 0;
+    }
+    .flex-two .flex-three .hdr {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+ }
+    .flex-two .flex-three .prg {
+        font-size: 16px;
         font-weight: 500;
-        font-size: 20px;
     }
+    .icons-atut {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1157px) {
+}
+@media (min-width: 1158px) {
+    /* wszystkie style trzeba wyciąć do desktopu czyli tu, ale niektóre przenieść to co nie wpływa na marginesy itp. kolory i jakieś tam */
 }
