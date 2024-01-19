@@ -8,6 +8,12 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles_section1.css" />
+    <link rel="stylesheet" href="./css/styles_section2.css" />
+    <link rel="stylesheet" href="./css/styles_section3.css" />
+    <link rel="stylesheet" href="./css/styles_section4.css" />
+    <link rel="stylesheet" href="./css/styles_section5.css" />
+    <link rel="stylesheet" href="./css/styles_footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,10 +23,10 @@
     <title>Studio</title>
   </head>
   <body>
-    <header class="flex-container">
+    <header class="flex-container d-none">
       <div class="container container-flex-one">
         <nav class="flex-nav relative">
-          <a class="logo link flex-logo" href="./index.html"
+          <a class="logo logo-p link flex-logo" href="./index.html"
             >Web<span class="logocolor">Studio</span>
           </a>
           <ul class="list flex-items">
@@ -72,15 +78,15 @@
     </header>
 
     <main>
-      <section class="bgd flex-one bgd-img">
+      <section class="bgd bgd-img">
         <div class="container container-flex-two">
-          <h1 class="headerstyl">Effective Solutions for Your Business</h1>
+          <h1 class="headerstyl">Effective Solutions<br />for Your Business</h1>
           <button class="btn-first" type="button" data-modal-open>
             Order Service
           </button>
         </div>
       </section>
-      <section class="flex-two">
+      <section>
         <div class="container container-flex-one">
           <h2 class="visually-hidden">The main goals of the company</h2>
           <ul class="list flex-three">
@@ -190,8 +196,8 @@
           </ul>
         </div>
       </section>
-      <section class="bgn-team flex-fife">
-        <div class="container column">
+      <section class="bgn-team">
+        <div class="container flex-fife">
           <h2 class="header-low">Our Team</h2>
           <ul class="list flex-team">
             <li class="bgr-white flex-person">
@@ -203,7 +209,7 @@
                 height="260"
               />
               <div class="div-person">
-                <h3 class="hdr">Mark Guerrero</h3>
+                <h3 class="hdr-person">Mark Guerrero</h3>
                 <p class="prg">Product Designer</p>
                 <ul class="flex-platform">
                   <li class="icons-platform">
@@ -266,7 +272,7 @@
                 height="260"
               />
               <div class="div-person">
-                <h3 class="hdr">Tom Ford</h3>
+                <h3 class="hdr-person">Tom Ford</h3>
                 <p class="prg">Frontend Developer</p>
                 <ul class="flex-platform">
                   <li class="icons-platform">
@@ -329,7 +335,7 @@
                 height="260"
               />
               <div class="div-person">
-                <h3 class="hdr">Camila Garcia</h3>
+                <h3 class="hdr-person">Camila Garcia</h3>
                 <p class="prg">Marketing</p>
                 <ul class="flex-platform">
                   <li class="icons-platform">
@@ -392,7 +398,7 @@
                 height="260"
               />
               <div class="div-person">
-                <h3 class="hdr">Daniel Wilson</h3>
+                <h3 class="hdr-person">Daniel Wilson</h3>
                 <p class="prg">UI Designer</p>
                 <ul class="flex-platform">
                   <li class="icons-platform">
@@ -449,11 +455,11 @@
           </ul>
         </div>
       </section>
-      <section class="customers">
+      <section>
         <div class="container">
           <h2 class="header-low">Customers</h2>
-          <ul class="list flex-three">
-            <li class="list-goals icons-costumers">
+          <ul class="list flex-costumers">
+            <li class="list-costumers icons-costumers">
               <a href="#" class="web-customers">
                 <svg
                   class="svg-customer"
@@ -465,7 +471,7 @@
                 </svg>
               </a>
             </li>
-            <li class="list-goals icons-costumers">
+            <li class="list-costumers icons-costumers">
               <a href="#" class="web-customers">
                 <svg
                   class="svg-customer"
@@ -477,7 +483,7 @@
                 </svg>
               </a>
             </li>
-            <li class="list-goals icons-costumers">
+            <li class="list-costumers icons-costumers">
               <a href="#" class="web-customers">
                 <svg
                   class="svg-customer"
@@ -489,7 +495,7 @@
                 </svg>
               </a>
             </li>
-            <li class="list-goals icons-costumers">
+            <li class="list-costumers icons-costumers">
               <a href="#" class="web-customers">
                 <svg
                   class="svg-customer"
@@ -501,7 +507,7 @@
                 </svg>
               </a>
             </li>
-            <li class="list-goals icons-costumers">
+            <li class="list-costumers icons-costumers">
               <a href="#" class="web-customers">
                 <svg
                   class="svg-customer"
@@ -513,7 +519,7 @@
                 </svg>
               </a>
             </li>
-            <li class="list-goals icons-costumers">
+            <li class="list-costumers icons-costumers">
               <a href="#" class="web-customers">
                 <svg
                   class="svg-customer"
@@ -529,7 +535,7 @@
         </div>
       </section>
     </main>
-    <footer class="bgd footer">
+    <footer class="bgd-f footer">
       <div class="container flex-footer">
         <div class="margin-footer">
           <a class="logo link block-footer" href="index.html"
@@ -540,7 +546,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div class="">
+        <div class="margin-footer">
           <p class="list-item-f">Social media</p>
           <ul class="platforms-footer">
             <li class="icons-footer">
@@ -594,7 +600,7 @@
             </li>
           </ul>
         </div>
-        <div class="sub-footer">
+        <div class="sub-footer margin-footer">
           <p class="list-item-f">Subscribe</p>
           <form class="form-footer">
             <label class="label-footer">
