@@ -77,7 +77,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 408px;
+    width: 90%;
+    max-width: 408px;
     min-height: 584px;
     transform: translate(-50%, -50%) scale(1);
     background: #fcfcfc;
@@ -264,9 +265,15 @@
             url("../images/people-office@2x.jpg");
     }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .headerstyl {
         font-size: 56px;
         line-height: 1.07;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .bgd {
+        padding-top: 188px;
+        padding-bottom: 188px;
     }
 }

@@ -1,5 +1,8 @@
 .flex-container {
     border-bottom: 1px solid var(--button-color);
+    box-shadow: 2px 1px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 1px 6px rgba(46, 47, 66, 0.08);
     padding: 24px 16px;
 }
 .container-flex-one {
@@ -83,7 +86,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    bottom: 0;
     background-color: var(--white-color);
     z-index: 10;
 }
@@ -142,10 +145,13 @@
 
 .menu-mobile.is-open .mobile-menu-container .flex-platform-mobile {
     display: flex;
-    justify-content: center;
+    max-width: 328px;
+    justify-content: space-between;
     align-items: center;
-    padding: 48px 0;
-    gap: 56px;
+    padding: 48px 24px 48px 40px;
+}
+.background-btn {
+    background-color: transparent;
 }
 @media (min-width: 768px) {
     .menu-toggle {
