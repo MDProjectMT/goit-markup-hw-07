@@ -10,16 +10,14 @@
 .flex-costumers {
     display: flex;
     flex-wrap: wrap;
-    width: calc((190px * 2) + 24px);
     align-items: flex-start;
     gap: 72px 24px;
     margin: 0 auto;
 }
 .list-costumers {
-    flex-basis: 190px;
+    flex-basis: calc((100% - 24px) / 2);
 }
 .icons-costumers {
-    width: 168px;
     height: 88px;
     display: flex;
     justify-content: center;
@@ -57,12 +55,15 @@
 
 @media screen and (min-width: 768px) {
     .flex-costumers {
-            width: calc((190px * 3) + (2 * 24px));
-        }
+        width: calc((190px * 3) + (2 * 24px));
+    }
+    .list-costumers {
+        flex-basis: calc((100% - (2 * 24px)) / 3);
+    }
 }
 @media screen and (min-width: 1158px) {
     .flex-costumers {
-            flex-wrap: nowrap;
-            width: 100%;
-        }
+        flex-wrap: nowrap;
+        width: 100%;
+    }
 }

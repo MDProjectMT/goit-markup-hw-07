@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles_header.css" />
     <link rel="stylesheet" href="./css/styles_section1.css" />
     <link rel="stylesheet" href="./css/styles_section2.css" />
     <link rel="stylesheet" href="./css/styles_section3.css" />
@@ -23,20 +24,20 @@
     <title>Studio</title>
   </head>
   <body>
-    <header class="flex-container d-none">
-      <div class="container container-flex-one">
+    <header class="container flex-container">
+      <div class="container-flex-one">
         <nav class="flex-nav relative">
           <a class="logo logo-p link flex-logo" href="./index.html"
             >Web<span class="logocolor">Studio</span>
           </a>
           <ul class="list flex-items">
-            <li class="list-contact">
+            <li>
               <a class="list-item active link" href="./index.html">Studio</a>
             </li>
-            <li class="list-contact">
+            <li>
               <a class="list-item link" href="./portfolio.html">Portfolio</a>
             </li>
-            <li class="list-contact">
+            <li>
               <a class="list-item link" href="">Contacts</a>
             </li>
           </ul>
@@ -62,12 +63,12 @@
         </nav>
         <address class="contact">
           <ul class="list flex-address">
-            <li class="list-contact">
+            <li>
               <a class="linkcolor link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li class="list-contact">
+            <li>
               <a class="linkcolor link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
@@ -76,7 +77,186 @@
         </address>
       </div>
     </header>
-
+    <div class="menu-mobile js-menu-container">
+      <div class="btn-container">
+        <button class="close-btn js-close-menu">
+          <svg class="svg-close-btn" viewBox="0 0 32 32" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-container">
+        <nav class="flex-nav relative">
+          <ul class="list flex-items">
+            <li class="list-contact">
+              <a class="list-item active link" href="./index.html">Studio</a>
+            </li>
+            <li class="list-contact">
+              <a class="list-item link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="list-contact">
+              <a class="list-item link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <address class="mobile-contact">
+            <ul class="list flex-address">
+              <li class="list-contact">
+                <a class="linkcolor-first link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="list-contact">
+                <a class="linkcolor link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="flex-platform-mobile">
+            <li class="icons-platform">
+              <a href="#" class="web-icon">
+                <svg
+                  class="svg-platform"
+                  viewBox="0 0 32 32"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icons-platform">
+              <a href="#" class="web-icon">
+                <svg
+                  class="svg-platform"
+                  viewBox="0 0 32 32"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icons-platform">
+              <a href="#" class="web-icon">
+                <svg
+                  class="svg-platform"
+                  viewBox="0 0 32 32"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icons-platform">
+              <a href="#" class="web-icon">
+                <svg
+                  class="svg-platform"
+                  viewBox="0 0 32 32"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="menu-mobile js-menu-container">
+      <div class="btn-container">
+        <button class="close-btn js-close-menu">
+          <svg class="svg-close-btn" viewBox="0 0 32 32" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-container">
+        <nav class="flex-nav relative">
+          <ul class="list flex-items">
+            <li class="list-contact">
+              <a class="list-item active link" href="./index.html">Studio</a>
+            </li>
+            <li class="list-contact">
+              <a class="list-item link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="list-contact">
+              <a class="list-item link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <address class="mobile-contact">
+            <ul class="list flex-address">
+              <li class="list-contact">
+                <a class="linkcolor-first link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="list-contact">
+                <a class="linkcolor link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="flex-platform-mobile">
+            <li class="icons-platform">
+              <a href="#" class="web-icon">
+                <svg
+                  class="svg-platform"
+                  viewBox="0 0 32 32"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icons-platform">
+              <a href="#" class="web-icon">
+                <svg
+                  class="svg-platform"
+                  viewBox="0 0 32 32"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icons-platform">
+              <a href="#" class="web-icon">
+                <svg
+                  class="svg-platform"
+                  viewBox="0 0 32 32"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icons-platform">
+              <a href="#" class="web-icon">
+                <svg
+                  class="svg-platform"
+                  viewBox="0 0 32 32"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <main>
       <section class="bgd bgd-img">
         <div class="container container-flex-two">
@@ -624,17 +804,13 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button
-          class="close-btn-position close-btn"
-          type="button"
-          data-modal-close
-        >
+        <button class="close-btn" type="button" data-modal-close>
           <svg class="svg-close-btn" viewBox="0 0 32 32" width="8" height="8">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
         <p class="modal-p">Leave your contacts and we will call you back</p>
-        <form class="form-modal">
+        <form>
           <div class="div-modal-l">
             <label for="user-name" class="label-modal">Name</label>
             <div class="div-modal-si">

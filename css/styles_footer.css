@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 72px;
+    width: 100%;
     
 }
 .block-footer {
@@ -91,10 +92,11 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width: 100%;
 }
 .input-footer {
     background-color: transparent;
-    width: 264px;
+    width: 100%;
     height: 40px;
     gap: 24px;
     border: 1px solid var(--white-color);
@@ -106,11 +108,9 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: var(--white-color);
 }
-
 .input-footer::placeholder {
     color: var(--white-color);
 }
-
 .btn-footer {
     min-width: 165px;
     display: flex;
@@ -122,32 +122,57 @@
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    padding: 0 24px;
+    width: 165px;
+    margin: 0 auto;
+    padding: 8px 24px;
 }
-
 .svg-send {
     margin-left: 16px;
 }
+.sub-footer {
+    padding-bottom: 0;
+}
 
-
-
-
-
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .flex-footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: start;
+        gap: 24px;
+        width: calc(264px * 2 + 24px);
+        padding: 0;
+    }
+    .margin-footer {
+        flex-basis: calc((100% - 24px) / 2);
+        align-items: start;
+    }
+    .sub-footer {
+        flex-basis: 100%;
+    }
+    .form-footer {
+        flex-direction: row;
+        width: 100%;
+    }
+    .btn-footer {
+        margin: 0;
+    }
+    .label-footer {
+        width: 50%;
+    }
+}
 
 @media screen and (min-width: 1158px) {
-    .bgd-f {
-            height: 312px;
-}
-.flex-footer {
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-}
-.sub-footer {
-    padding-left: 80px;
-}
-.form-footer {
-    flex-direction: row;
-}
+    .flex-footer {
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .margin-footer {
+        flex-basis: auto;
+        width: auto;
+        padding-bottom: 0;
+    }
+    .label-footer {
+        width: 264px;
+    }
 }
